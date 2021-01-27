@@ -1,0 +1,8 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/map_screen.rpy", line 24: Tab characters are not allowed in Ren'Py scripts.
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Mon Jan 25 07:38:52 2021
