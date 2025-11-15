@@ -79,3 +79,26 @@ image mika up:
     "mup2.png"
     0.2
     repeat
+init python:
+    def mika_step(aMap):
+        # Chỉ di chuyển khi Mika đang ở trạng thái "walk"
+        if m_status != "walk":
+            return
+
+        dx = 0
+        dy = 0
+
+        if k_dir == "up":
+            dx, dy = 0, -1
+        elif k_dir == "down":
+            dx, dy = 0, 1
+        elif k_dir == "left":
+            dx, dy = -1, 0
+        elif k_dir == "right":
+            dx, dy = 1, 0
+        else:
+            # Không có hướng hợp lệ thì không làm gì
+            return
+
+        # Gọi hàm di chuyển có sẵn trong map.rpy
+        aMap.moveDenizen(mika.x, mika.y, dx, dy)
